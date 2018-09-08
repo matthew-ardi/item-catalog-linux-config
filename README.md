@@ -37,4 +37,4 @@ This application was configured for apache2 under the ```web.conf``` configurati
 ```
 
 
-> note that the application is currently running using Flask web server deployment due to issues regarding permissions. Changes will be made and this documentation will be updated.
+> note that the application is currently deployed using Flask web server deployment due to issues regarding permissions. Changes will be made and this documentation will be updated.
