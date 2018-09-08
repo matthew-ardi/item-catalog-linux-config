@@ -36,5 +36,15 @@ This application was configured for apache2 under the ```web.conf``` configurati
    </VirtualHost>
 ```
 
+## Locating SSH key for user
+to locate ssh key for each user, go to the following path,
+```
+/home/<user name>/.ssh/authorized_keys
+```
+
+for example
+```
+/home/grader/.ssh/authorized_keys
+```
 
 > note that the application is currently deployed using Flask web server deployment due to issues regarding permissions. Changes will be made and this documentation will be updated.
