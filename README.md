@@ -4,7 +4,7 @@ Application deployed by this configuration can be found here: [item-catalog](htt
 
 IP address: 13.58.78.114
 
-Domain name : [mardiapp.tk/dashboard](mardiapp.tk/dashboard)
+Domain name : [mardiapp.tk/dashboard](http://www.mardiapp.tk/dashboard/)
 
 ## Installed Dependencies
 - Apache2
