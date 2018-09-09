@@ -31,8 +31,30 @@ This application was configured for apache2 under the ```web.conf``` configurati
     ServerName www.mardiapp.tk
     ServerAdmin admin@mardiapp.tk
 
-    WSGIDaemonProcess ...
-    ...
+    WSGIDaemonProcess mardiapp.tk python-path=/var/www python-home=/var/www/item-catalog/venv
+    WSGIScriptAlias / /var/www/item-catalog/app.wsgi
+
+    <Directory /var/www/item-catalog>
+        Order allow,deny
+        Allow from all
+    </Directory>
+
+    Alias /static /var/www/item-catalog/templates
+
+    <Directory /var/www/item-catalog/templates>
+        Order allow,deny
+        Allow from all
+    </Directory>
+
+    <Directory /var/www/.python-eggs>
+        Order allow,deny
+        Allow from all
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    LogLevel warn
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
    </VirtualHost>
 ```
 
@@ -46,5 +68,17 @@ for example
 ```
 /home/grader/.ssh/authorized_keys
 ```
+
+## List of Third Party Resources
+
+Technical:
+- [Flask_SQLalchemy extension](http://flask-sqlalchemy.pocoo.org/2.3/) used as helper for SQLalchemy operations.
+- [Google APIs](https://developers.google.com/products/)
+- [Google Oauth2client - deprecated](https://github.com/google/oauth2client)
+
+References:
+- [https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps) used as a reference to test apache2 server. sample programs could be found in the same server under ```/var/www/FlaskApps``` with the apache2 configuration in ```/etc/apache2/sites-available/FlaskApp.conf```. The application is named as FlaskApp.
+
+
 
 > note that the application is currently deployed using Flask web server deployment due to issues regarding permissions. Changes will be made and this documentation will be updated.
