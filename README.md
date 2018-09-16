@@ -2,7 +2,7 @@
 
 Application deployed by this configuration can be found here: [item-catalog](https://github.com/matthew-ardi/item-catalog)
 
-IP address: 13.58.78.114
+IP address: 35.171.188.216
 
 Domain name : [mardiapp.tk/dashboard](http://www.mardiapp.tk/dashboard/)
 
